@@ -1,0 +1,105 @@
+#dfoxt-thumbnails{
+	background-color: #f9f9f9;
+	border-radius: 3px;
+	border: 1px dashed #bbb;
+	cursor: pointer;
+	min-height: 50px;
+	margin-top: 10px;
+	display: table;
+	width: 95%;
+	position: relative;
+	box-sizing: border;
+	transition: all 0.3s;
+	&.dfoxt_maxw{
+		max-width: 600px;
+	}
+	.dfoxt-mask{
+		width: 100%;
+		height:100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: transparent;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.dfoxt-close{
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 20px;
+		background-color: rgba(255, 255, 255, 0.4);
+		display:none;
+		&.active{
+			display:block;
+		}
+		&:hover{
+			background-color:rgba(255,255,255,.7);
+		}
+	}
+	.dfoxt-gridly{
+		transition: all 0.4s ease-in-out;
+		&:after{
+			content: ' ';
+			display: block;
+			clear: both
+		}
+		.dfoxt-brick{
+			float: left;
+			width: 120px;
+			height: 0;
+			padding-bottom: 120px;
+			position: relative;
+			.dfoxt-block{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				padding: 10px;
+				box-sizing: border-box;
+				.dfoxt-bg{
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					height: 100%;
+					width: 100%;
+				}
+			}
+			.dfoxt-close-min{
+				position: absolute;
+				z-index: 1;
+				height: 20px;
+				width: 20px;
+				right: 10px;
+				top: 10px;
+				background-color: rgba(255, 255, 255, 0.4);
+				z-index: 9999;
+				display: block;
+				padding: 8px 8px 10px 10px;
+				&:hover{
+					background-color:rgba(255,255,255,.7);
+				}
+			}
+		}
+		& > :not(.dfoxt-dragging){
+			transition: all 0.4s ease-in-out;
+		}
+		.dfoxt-dragging{
+			z-index: 9;
+		}
+	}
+	h2{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: #888;
+		font-weight: 300;
+		font-size: 14px;
+	}
+	&:hover{
+		border-color:#0073aa;
+		h2{
+			color:#0073aa;
+		}
+	}
+}

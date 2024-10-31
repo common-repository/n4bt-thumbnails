@@ -1,0 +1,108 @@
+#n4bt-thumbnails {
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  border: 1px dashed #bbb;
+  cursor: pointer;
+  min-height: 50px;
+  margin-top: 10px;
+  display: table;
+  width: 95%;
+  position: relative;
+  box-sizing: border;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+#n4bt-thumbnails.n4bt_maxw {
+  max-width: 600px;
+}
+#n4bt-thumbnails .n4bt-mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#n4bt-thumbnails .n4bt-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: none;
+}
+#n4bt-thumbnails .n4bt-close.active {
+  display: block;
+}
+#n4bt-thumbnails .n4bt-close:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#n4bt-thumbnails .n4bt-gridly {
+  -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+}
+#n4bt-thumbnails .n4bt-gridly:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+#n4bt-thumbnails .n4bt-gridly .n4bt-brick {
+  float: left;
+  width: 120px;
+  height: 0;
+  padding-bottom: 120px;
+  position: relative;
+}
+#n4bt-thumbnails .n4bt-gridly .n4bt-brick .n4bt-block {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#n4bt-thumbnails .n4bt-gridly .n4bt-brick .n4bt-block .n4bt-bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+#n4bt-thumbnails .n4bt-gridly .n4bt-brick .n4bt-close-min {
+  position: absolute;
+  z-index: 1;
+  height: 20px;
+  width: 20px;
+  right: 10px;
+  top: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 9999;
+  display: block;
+  padding: 8px 8px 10px 10px;
+}
+#n4bt-thumbnails .n4bt-gridly .n4bt-brick .n4bt-close-min:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#n4bt-thumbnails .n4bt-gridly > :not(.n4bt-dragging) {
+  -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+}
+#n4bt-thumbnails .n4bt-gridly .n4bt-dragging {
+  z-index: 9;
+}
+#n4bt-thumbnails h2 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #888;
+  font-weight: 300;
+  font-size: 14px;
+}
+#n4bt-thumbnails:hover {
+  border-color: #0073aa;
+}
+#n4bt-thumbnails:hover h2 {
+  color: #0073aa;
+}
